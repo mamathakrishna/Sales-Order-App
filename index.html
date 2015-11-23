@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.viz"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script>
+				sap.ui.localResources("sorderapp");
+				var app = new sap.m.App({initialPage:"idLogin1"});
+				var page = sap.ui.view({id:"idLogin1", viewName:"sorderapp.Login", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				var page1 = sap.ui.view({id:"idMyHome1", viewName:"sorderapp.MyHome", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page1);
+				 var page2 = sap.ui.view({id:"idSalesOrderCreation1", viewName:"sorderapp.SalesOrderCreation", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page2); 
+				var page3 = sap.ui.view({id:"idSalesOrderCreationNext1", viewName:"sorderapp.SalesOrderCreationNext", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page3);
+				var page4 = sap.ui.view({id:"idSalesOrderCreationNext11", viewName:"sorderapp.SalesOrderCreationNext1", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page4); 
+				var page5 = sap.ui.view({id:"idEditSalesOrder1", viewName:"sorderapp.EditSalesOrder", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page5);
+				var page6 = sap.ui.view({id:"idTrackSO1", viewName:"sorderapp.TrackSO", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page6); 
+				var page7 = sap.ui.view({id:"idSOStatus1", viewName:"sorderapp.SOStatus", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page7);
+				app.placeAt("content");
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>

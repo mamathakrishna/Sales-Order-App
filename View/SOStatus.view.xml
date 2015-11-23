@@ -1,0 +1,122 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:u="sap.ui.unified"
+	xmlns="sap.m" xmlns:viz="sap.viz.ui5" xmlns:data="sap.viz.ui5.data" 
+	controllerName="sorderapp.SOStatus" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+	.myChartS
+	{
+	position: absolute;
+	top:5rem;
+	right:5rem;
+	
+	}
+	
+	.myChartS1
+	{
+	position: absolute;
+	top:5rem;
+	left:5rem;
+	
+	}
+	
+	.myChartSTitle
+	{
+	position: absolute;
+	font-weight: bold;
+	top: 2rem;
+    left: 61rem;
+	
+	}
+	
+	.myChartS1Title
+	{
+	position: absolute;
+	font-weight: bold;
+	top: 2rem;
+    left: 10rem;
+	
+	}
+	
+
+	
+	.myPage { font-weight:500; background-image:url("images/plain_depth_hd.jpg") 
+			!important; } 
+
+		
+
+	
+	
+	</html:style>
+	
+	<Page class="myPage" title="Analysis">
+		<content>
+	<u:Shell id="myShell1" icon="{/logo}">
+				<u:headItems>
+					<u:ShellHeadItem tooltip="Menu" icon="sap-icon://menu2"
+						press="handlePressConfiguration" />
+					
+				</u:headItems>
+
+				
+				<u:headEndItems>
+					<u:ShellHeadItem tooltip="Home" icon="sap-icon://home"
+						visible="true" press="handlePressHome" />
+				</u:headEndItems>
+				<u:user>
+
+					<!-- <u:ShellHeadUserItem image="sap-icon://person-placeholder"
+						username="Sales Representative" press="handleUserItemPressed" showPopupIndicator="false"
+						 /> -->
+						 <u:ShellHeadUserItem image="sap-icon://person-placeholder"
+						username="Sales Representative" showPopupIndicator="false" press="handleUserItemPressed"/>
+				</u:user>
+
+
+
+				<u:content>
+		
+		<Text id="mytxt1" text="Total Amount by Sales Order" class="myChartS1Title" />
+			<viz:Bar id="myBarChart" height="75%" width="50%" class="myChartS1">
+			
+				<viz:dataset>
+					<data:FlattenedDataset data="{/SOServices}">
+						<data:dimensions>
+							<data:DimensionDefinition axis="1" name="Service Order"
+								value="{name}">
+							</data:DimensionDefinition>
+						</data:dimensions>
+						<data:dimensions>
+							<data:DimensionDefinition axis="1" name="Status"
+								value="{status}">
+							</data:DimensionDefinition>
+						</data:dimensions>
+						 <data:measures>
+							<data:MeasureDefinition name="Amount"
+								value='{amount}' />
+						</data:measures> 
+					</data:FlattenedDataset>
+				</viz:dataset>
+			</viz:Bar>
+			<Text id="mytxt2" text="Sales Order Status Chart" class="myChartSTitle" />
+			<viz:Pie id="myPieC" title="PieChart"
+				height="100%" width="30%" class="myChartS">
+				<viz:dataset>
+					<data:FlattenedDataset data="{/SOServices1}">
+						
+						<data:dimensions>
+							<data:DimensionDefinition axis="1" name="Status"
+								value="{status}">
+							</data:DimensionDefinition>
+						</data:dimensions>
+						 <data:measures>
+							<data:MeasureDefinition name="Count"
+								value='{count}' />
+						</data:measures> 
+					</data:FlattenedDataset>
+				</viz:dataset>
+			</viz:Pie>
+		
+</u:content>
+</u:Shell>
+		</content>
+	</Page>
+</core:View>

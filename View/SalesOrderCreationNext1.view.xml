@@ -1,0 +1,157 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout" xmlns:c="sap.ui.commons" controllerName="sorderapp.SalesOrderCreationNext1"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+
+	<html:style>
+		.myPage
+		{
+		<!-- font-weight:bold; -->
+		font-weight:500;
+		background-image:url("images/plain_depth_hd.jpg")
+		!important;
+
+		}
+
+
+		.sapUiFormResGrid>div {
+		background-color:
+		rgba(255,255,255,0.8);
+		padding: 2rem 0.75rem;
+		-moz-box-sizing:
+		padding-box;
+		box-sizing: border-box;
+		}
+		.sapUiUfdSpltContCntnt {
+		overflow:
+		auto;
+		-webkit-overflow-scrolling: touch;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image:url("images/plain_depth_hd.jpg") !important;
+		}
+		.sapUiSimpleForm {
+		width: 96%;
+		padding-top: 1rem;
+		padding-left: 3.5rem;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		}
+
+		.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL12
+		{
+		width: 127%;
+		}
+
+		.sapUiSmallMarginBottom {
+		margin-bottom: 0rem!important;
+		}
+
+
+		.myStyleTitle .sapUiForm .sapUiFormTitle {
+		border-width: 0.0625rem;
+		font-family: Arial,Helvetica,sans-serif;
+		font-weight: normal;
+		color: rgba(51, 51, 51, 0.01);
+		}
+
+		
+	</html:style>
+	<Page title="Create Sales Order">
+		<content>
+			<u:Shell id="myShell" icon="{/logo}">
+				<u:headItems>
+					<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2"
+						press="handlePressConfiguration" />
+					<!-- <u:ShellHeadItem icon="sap-icon://save" tooltip="Save"
+						press="handleLogoffPress" /> -->
+
+				</u:headItems>
+				<u:headEndItems>
+
+				</u:headEndItems>
+				<u:headEndItems>
+					<!-- <u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff"
+						press="handleLogoffPress" /> -->
+					<u:ShellHeadItem tooltip="Home" icon="sap-icon://home"
+						visible="true" press="handlePressHome" />
+				</u:headEndItems>
+				<u:user>
+
+					<u:ShellHeadUserItem image="sap-icon://person-placeholder"
+						username="Sales Representative" press="handleUserItemPressed" />
+				</u:user>
+
+				<u:content>
+					<f:SimpleForm layout="ResponsiveGridLayout" id="Mainform"
+						title="Shipping" class="myStyleTitle">
+						<f:content>
+							<l:Grid hSpacing="1" vSpacing="1" defaultSpan="L4 M6 S12">
+								<l:content>
+									<l:Grid hSpacing="1" vSpacing="1" defaultSpan="L6 M6 S12">
+										<l:content>
+											<Label text="Delivery Block" design="Bold"
+												textAlign="End">
+											</Label>
+											<Select width="100%">
+												<items>
+													<core:Item text="Bottleneck material" />
+													<core:Item text="Change in quantity" />
+													<core:Item text="Price change approval" />
+												</items>
+											</Select>
+											<Label text="Overall Status" design="Bold" textAlign="Start">
+											</Label>
+											<Select width="100%">
+												<items>
+													<core:Item text="Open" />
+													<core:Item text="Closed" />
+												
+												</items>
+											</Select>
+											<Label text="Delivery Status" design="Bold" textAlign="End">
+											</Label>
+											<Select width="100%">
+												<items>
+													<core:Item text="Open" />
+													<core:Item text="Processed" />
+													<core:Item text="Shipped" />
+												</items>
+											</Select>
+
+											<Button class="sapUiSmallMarginBottom" icon="sap-icon://sales-order" text="Create Sales Order"
+											type="Emphasized"	press="onSubmit" >
+											</Button>
+										</l:content>
+									</l:Grid>
+
+
+								</l:content>
+							</l:Grid>
+						</f:content>
+					</f:SimpleForm>
+
+				</u:content>
+			</u:Shell>
+
+		</content>
+
+
+
+
+		<footer>
+			<Bar>
+				<!-- <contentRight>
+					<Button id="btnNext" text="Next" press="handleEditPress" type="Emphasized" />
+					<Button id="save" text="Save" type="Emphasized" visible="false" 
+						press="handleSavePress" /> <Button id="cancel" text="Cancel" visible="false" 
+						press="handleCancelPress" />
+				</contentRight> -->
+			</Bar>
+		</footer>
+	</Page>
+</core:View>

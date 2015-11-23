@@ -1,0 +1,16 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ActionSheet
+		title="Choose Your Action"
+		showCancelButton="true"
+		placement="Bottom">
+		<buttons>
+			<Button text="  Create Sales Order" icon="images\Create.png" class="myActionSheetbtn" press="onCSPress"/>
+			<Button text="  Edit Sales Order" icon="images\Edit.png" class="myActionSheetbtn" press="onESPress"/>
+			<Button text="  Track Sales Order" icon="images\tracking-icon.png" class="myActionSheetbtn" press="onTSPress"/>
+			<Button text="  Analytics" icon="images\stats.png" class="myActionSheetbtn" press="onASPress"/>
+			
+		</buttons>
+	</ActionSheet>
+</core:FragmentDefinition>

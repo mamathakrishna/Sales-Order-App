@@ -1,0 +1,48 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" xmlns:viz="sap.viz.ui5" xmlns:data="sap.viz.ui5.data"
+	controllerName="sorderapp.Analysis" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="PieChart">
+		<content>
+			<viz:Bar id="myPieChart" height="100%" width="50%">
+			
+				<viz:dataset>
+					<data:FlattenedDataset data="{/SOServices}">
+						<data:dimensions>
+							<data:DimensionDefinition axis="1" name="Sales Order"
+								value="{name}">
+							</data:DimensionDefinition>
+						</data:dimensions>
+						<!-- <data:dimensions>
+							<data:DimensionDefinition axis="1" name="Status"
+								value="{status}">
+							</data:DimensionDefinition>
+						</data:dimensions> -->
+						 <data:measures>
+							<data:MeasureDefinition name="Amount"
+								value='{amount}' />
+						</data:measures> 
+					</data:FlattenedDataset>
+				</viz:dataset>
+			</viz:Bar>
+			
+			<viz:Pie id="myPieC" title="PieChart"
+				height="100%" width="30%" class="myStyle">
+				<viz:dataset>
+					<data:FlattenedDataset data="{/SOServices1}">
+						
+						<data:dimensions>
+							<data:DimensionDefinition axis="1" name="Status"
+								value="{status}">
+							</data:DimensionDefinition>
+						</data:dimensions>
+						 <data:measures>
+							<data:MeasureDefinition name="Count"
+								value='{count}' />
+						</data:measures> 
+					</data:FlattenedDataset>
+				</viz:dataset>
+			</viz:Pie>
+<Button icon="sap-icon://nav-back" press="onPress"/>
+		</content>
+	</Page>
+</core:View>

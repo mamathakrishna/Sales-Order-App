@@ -1,0 +1,77 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified"
+		controllerName="sorderapp.MyHome" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<html:style>
+	.myPage { font-weight:500; background-image:url("images/plain_depth_hd.jpg") 
+			!important; } 
+
+		
+
+	
+	
+	</html:style>
+	
+	<Page class="myLoginbkgrnd" showHeader="false">
+		<content>
+	<u:Shell id="myShell" icon="{/logo}">
+				<u:headItems>
+					<u:ShellHeadItem tooltip="Menu" icon="sap-icon://menu2"
+						press="handlePressConfiguration" />
+					
+				</u:headItems>
+
+				
+				<u:headEndItems>
+					<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff"
+						press="handleLogoffPress" />
+				</u:headEndItems>
+				<u:user>
+
+					<!-- <u:ShellHeadUserItem image="sap-icon://person-placeholder"
+						username="Sales Representative" press="handleUserItemPressed" showPopupIndicator="false"
+						 /> -->
+						 <u:ShellHeadUserItem image="sap-icon://person-placeholder"
+						username="Sales Representative" showPopupIndicator="false"/>
+				</u:user>
+
+
+
+				<u:content>
+
+					<TileContainer xmlns="sap.m" id="idTileContainer" width="100%" 
+						height="100%" editable="" allowAdd="" tileMove="" tileDelete="" tileAdd="" 
+						class="myPage"> 
+
+						<tiles>
+							<StandardTile xmlns="sap.m" id="idTile" removable="true"
+								title="Create Sales Order" info=" " icon="images\Create.png"
+								activeIcon="" number="" numberUnit="" type="None"
+								iconDensityAware="true" press="onPress" class="myHomecustomTile">
+							</StandardTile>
+
+							<StandardTile xmlns="sap.m" id="idTilee" removable="true"
+								title="Edit Sales Order" info="" icon="images\Edit.png"
+								activeIcon="" number="{UserId}" numberUnit="" type="None"
+								iconDensityAware="true" press="onPressEdit" class="myHomecustomTile">
+							</StandardTile>
+
+							<StandardTile xmlns="sap.m" id="idTileee" removable="true"
+								title="Track Sales Order" info="" icon="images\tracking-icon.png"
+								activeIcon="" number="{UserId}" numberUnit="" type="None"
+								iconDensityAware="true" press="onPressTrack" class="myHomecustomTile">
+							</StandardTile>
+
+							<StandardTile id="idTileeee" removable="true" title="Analytics"
+								info="" icon="images\stats.png" activeIcon="" number=""
+								numberUnit="" type="None" iconDensityAware="true"
+								press="OnPressAnalytics" class="myHomecustomTile">
+							</StandardTile>
+						</tiles>
+
+
+					</TileContainer>
+				</u:content>
+			</u:Shell>
+		</content>
+	</Page>
+</core:View>

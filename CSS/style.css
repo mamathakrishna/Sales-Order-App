@@ -1,0 +1,203 @@
+.myLoginbkgrnd
+		{
+		/* background-image:url("images/Aqua.jpg");  */
+		/* background-color: */
+		/* background-image:url("images/fmbg13.jpg");  */
+		}
+		
+		
+.myLogintext
+		{
+		padding-bottom: 34px;
+   /*  font-weight: bold; */
+   font-size: 12px;
+    position: relative;
+    top: 7rem;
+    left: 11rem;
+    color: white;
+		}
+		
+	.myLoginImage{
+	 /* position: relative;
+    top: -8rem;
+    left: 11rem;
+    height: 4rem;
+    width: 10rem;  */
+    
+ 
+   /*  position: relative;
+    top: -8rem;
+    left: 11rem;
+    height: 4rem;
+    width: 4rem; */
+    position: relative;
+    top: -6rem;
+    left: 10.8rem;
+    height: 3rem;
+    width: 5rem;
+    
+	}	
+		.myLogininput .sapMInputBaseInner{
+	color: black ;
+	background-color: white;
+	border: 1px solid rgba(255, 255, 255, 0.85);
+	border-radius: 0.5rem ;
+	margin: 1em 0 ;
+	height: 2em ;
+	width: 16rem ;
+     
+
+}
+
+.myLogininput1{
+	padding-bottom: 20rem; 
+    position: relative;
+    font-size: 9px;
+    top: 6rem;
+    left: 11rem;
+    height: 2rem;
+    display: inline !important; 
+	
+	
+}
+		
+		.myLoginForm
+		{
+		
+		position:relative;
+		top:38px;
+		left:63px;
+	
+		
+		}	
+
+/* Text box curve */	
+	
+		/* .sapMInputBaseInner {
+    color: black !important;
+    background-color: white !important;
+    border: 1px solid rgba(255, 255, 255, 0.85) !important;
+    border-radius: 0.5rem !important;
+    margin: 1em 0 !important;
+    height: 2em !important;
+    width: 16rem !important;
+		} */
+		
+	.mybtnStyle .sapMBtnInner {
+    height: 2.150rem !important;
+    color: black !important;
+    background-color: #7FADBC !important; 
+    border-radius: 0.5rem !important;
+    border: 1em !important;
+}
+		
+		.mybtn
+		{
+		/* position: relative;
+    top: 2rem;
+    left: 11rem;
+    width: 9rem; 
+     */
+   position: relative;
+    top: 3rem;
+    left: 11rem;
+    width: 9rem;
+		}
+		
+		.myActionSheetbtn
+		{
+		color:white!important;
+		}
+		
+		.myHomecustomTile
+		{ top:0rem; left:20rem; border-style:solid; border-width:2px; 
+			border-color:orange; border-radius: 10px;
+			
+			}
+		
+		/* .sapMBtn {
+    height: 2.000rem !important;
+    margin: 0;
+    padding: 0.250rem 0;
+    vertical-align: top;
+    background-color: transparent;
+    border: none;
+     color: white!important;
+    cursor: pointer;
+} */
+
+/* .sapMBtnInner {
+    height: 2.150rem !important;
+    color: black !important;
+   background-color: #7FADBC !important; 
+    border-radius: 0.5rem !important;
+    border: 1em !important;
+}  */
+
+
+
+/* sapUiUfdShellHeadUsrItmExp
+{
+	
+	
+} */
+
+
+.sapMBtn:hover> .sapMBtnHoverable {
+    background-image: none;
+    background-color: #7FADBC !important; 
+    font-weight: 400;
+    color: white !important;
+}
+
+
+
+
+/* :not(.sapMBtnDisabled)>.sapMBtnInner.sapMbtnActive {
+background-color: #007cc0 !important;
+} */
+
+
+
+/* .sapMFocusable {
+   color:white!important
+} */
+
+/* .sapMBtnActive {
+   color:white!important;
+   text-shadow:none !important;
+} */
+
+/* .sapMFocusable {
+   color:white!important
+}
+ */
+
+/* .sap-desktop .sapMActionSheetPopover.sapMPopover {
+    background-color: #E0E0E0   !important;
+    color:white!important;
+} */
+
+.myloginLogo {
+   position: absolute;
+    bottom: -23rem;
+    left: 16px;
+    height: 32px;
+}
+
+.myloginCopyright {
+    position: absolute;
+    bottom: -23rem;
+    right: -65rem;
+    font-size: 0.75em;
+    max-width: 320px;
+    text-align: right;
+}	
+
+.mybtnCSNext {
+   
+    left: -78rem;
+}
+
+
+	

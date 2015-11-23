@@ -1,0 +1,245 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified" xmlns="sap.m" controllerName="sorderapp.TrackSO" xmlns:html="http://www.w3.org/1999/xhtml">
+	<html:style>
+		.myPage
+		{
+		<!-- font-weight:bold; -->
+		font-weight:500;
+		background-image:url("images/plain_depth_hd.jpg")!important;
+		height:1000px;
+		}
+		.myvbox
+		{
+		width: 220px;
+		position:relative;
+		background-color: #ffffff;
+		border-style:solid;
+		border-width:2px;
+		border-color:#d3d3d3;
+		}
+		.myvbox1
+		{
+		width: 1500px;
+		height:180px;
+		position:relative;
+		border-style:solid;
+		border-width:2px;
+		border-color:#d3d3d3;
+		}
+		.myvbox2
+		{
+		width: 1500px;
+		height:190px;
+		position:relative;
+		border-style:solid;
+		border-width:2px;
+		border-color:#d3d3d3;
+		background-color: #ffffff
+		}
+		.myvbox3
+		{
+		width: 1500px;
+		position:relative;
+		border-style:solid;
+		border-width:2px;
+		border-color:#d3d3d3;
+		}
+		.mytext
+		{
+		width: 200px;
+		position: relative;
+		top:30px;
+		left:50px;
+		font-size: 24px;
+		}
+		.mytext1
+		{
+		width: 200px;
+		position: relative;
+		top: 10px;
+		left:800px;
+		font-size: 20px;
+		}
+		.mytext2
+		{
+		width: 200px;
+		position: relative;
+		top: 20px;
+		left:800px;
+		font-size: 16px;
+		font-weight: bold;
+		color: green;
+		}
+		.mytext3
+		{
+		width: 200px;
+		position: relative;
+		top: 40px;
+		left:800px;
+		font-size: 16px;
+		}
+		.mytext4
+		{
+		width: 200px;
+		position: relative;
+		top: 10px;
+		left:400px;
+		font-size: 14px;
+		font-weight:bold;
+		}
+		.myimage
+		{
+		position: relative;
+		left: 120px;
+		top:50px;
+		width: 40px;
+		height: 40px;
+		}
+		.myimage1
+		{
+		position: relative;
+		top:-37px;
+		left: 270px;
+		width: 40px;
+		height: 40px;
+		}
+		.myimage2
+		{
+		position: relative;
+		top:-120px;
+		left: 400px;
+		width: 40px;
+		height: 40px;
+		}
+		.mytext5
+		{
+		position: relative;
+		left: 122px;
+		top:60px;
+		width: 40px;
+		height: 20px;
+		font-weight:bold;
+		}
+		.mytext6
+		{
+		position: relative;
+		left: 250px;
+		top:-25px;
+		width: 80px;
+		height:
+		20px;
+		font-weight:bold;
+		}
+		.mytext7
+		{
+		font-size:16px;
+		position: relative;
+		left: 55px;
+		top:5px;
+		width: 40px;
+		height: 20px;
+		}
+		.mytext8
+		{
+		position: relative;
+		left: 390px;
+		top:-110px;
+		width: 100px;
+		height:20px;
+		font-weight:bold;
+		}
+	</html:style>
+	<Page title="Track Sales Order" >
+		<content>
+		<u:Shell id="myShell" >
+			 <u:headItems>
+                              <u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2"
+                                    press="handlePressConfiguration" />
+                             <!--  <u:ShellHeadItem icon="sap-icon://save" tooltip="Save"
+                                    press="handleSavePress" /> -->
+
+                        </u:headItems>
+			
+			<u:headEndItems>
+			<u:ShellHeadItem
+			
+			
+					icon="sap-icon://home"
+					tooltip="My Home"
+					press="handlePressHome" />
+				
+			</u:headEndItems>
+			<u:user>
+				<u:ShellHeadUserItem
+					image="sap-icon://person-placeholder"
+					username="Sales Representative"
+					press="handleUserItemPressed" />
+			</u:user>	
+		
+		<u:content>
+			<HBox class="myPage" >
+				<VBox id="vert" class="myvbox">
+					<!-- <SearchField width="220px" visible="true" placeholder="Enter Sales Org." /> -->
+					<SearchField width="220px" visible="true" placeholder="Enter SO num." />
+				</VBox>
+				<VBox>
+					<VBox id="vert1" class="myvbox1">
+						<Text text="SO 12345" class="mytext" />
+						<Text text="6.54 USD" class="mytext1" />
+						<Text text="Shipped" class="mytext2" />
+						<Text text="Total 6.54 USD" class="mytext3" />
+					</VBox>
+					<VBox id="vert2" class="myvbox2">
+						<Text text="Delivery Schedules" class="mytext4" />
+						<Image src="images/open1.png" class="myimage" />
+						<Text text="Open" class="mytext5" />
+						<Text text="0" class="mytext5" />
+						<Image src="images/process.png" class="myimage1" />
+						<Text text="In Process" class="mytext6" />
+						<Text text="0" class="mytext6" />
+						<Image src="images/shipped.png" class="myimage2" />
+						<Text text="Shipped" class="mytext8" />
+						<Text text="1" class="mytext8" />
+					</VBox>
+					<VBox id="vert3" class="myvbox3">
+						<Text text="Items" class="mytext7" />
+						<Table id="myTable" title="Products" selectionMode="MultiToggle"
+							visibleRowCount="3">
+							<columns>
+								<Column width="5rem">
+									<Label text="Item" />
+								</Column>
+								<Column width="5rem">
+									<Label text="Quantity" />
+								</Column>
+								<Column width="5rem">
+									<Label text="Price" />
+								</Column>
+								<Column width="5rem">
+									<Label text="Subtotal" />
+								</Column>
+								<Column width="5rem">
+									<Label text="Status" />
+								</Column>
+							</columns>
+							<items>
+								<ColumnListItem>
+									<cells>
+										<Text text="POLES" />
+										<Text text="20 PC." />
+										<Text text="327,40 USD" />
+										<Text text="6.548 USD" />
+										<Text text="Shipped" />
+									</cells>
+								</ColumnListItem>
+							</items>
+						</Table>
+					</VBox>
+				</VBox>
+			</HBox>
+
+</u:content>
+			</u:Shell>
+		</content>
+	</Page>
+</core:View>

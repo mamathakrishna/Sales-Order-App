@@ -1,0 +1,210 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+      xmlns:commons="sap.ui.commons" xmlns:u="sap.ui.unified" xmlns="sap.m"
+      controllerName="sorderapp.EditSalesOrder" xmlns:html="http://www.w3.org/1999/xhtml">
+      <html:style>
+  
+		.myPage
+		{
+		<!-- font-weight:bold; -->
+		font-weight:500;
+		background-image:url("images/plain_depth_hd.jpg")
+		!important;
+
+		}
+            .myeditvbox
+            {
+            width: 200px;
+            height: 460px;
+            position:relative;
+            left:
+            260px;
+            top: 70px;
+            background-color: #ffffff;
+            border-style: solid;
+            border-width: 3px;
+            border-color: #d3d3d3;
+            }
+            .myhbox
+            {
+            width: 595px;
+            height: 20px;
+            position:relative;
+            left: 465px;
+            top:-396px;
+            background-color: #ffffff;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #d3d3d3;
+            }
+            .myhbox1
+            {
+            width: 596px;
+            height: 20px;
+            position:relative;
+            left: 464px;
+            top:-418px;
+            background-color: #ffffff;
+            border-style: solid;
+            border-width: 2px;
+            border-color: #d3d3d3;
+            }
+            .myvbox1
+            {
+            width: 594px;
+            height: 185px;
+            position:relative;
+            left:
+            464px;
+            top: -400px;
+            background-color: rgb(221,238,241);
+            border-style:
+            solid;
+            border-width: 3px;
+            border-color: #d3d3d3;
+            }
+            .myvbox2
+            {
+            width: 594px;
+            height: 245px;
+            position:relative;
+            left: 464px;
+            top: -420px;
+            border-style:
+            solid;
+            border-width: 3px;
+            border-color: #d3d3d3;
+            }
+            .mytext
+            {
+            position: relative;
+            left: 280px;
+            top:2px;
+            font-weight: bold;
+            font-size: 16px;
+            }
+            .mytext1
+            {
+            position: relative;
+            width: 200px;
+            top:20px;
+            left: 10px;
+            }
+            .myinput
+            {
+            left: 130px;
+            top:-10px;
+            }
+            .myinput1
+            {
+            left: 345px;
+            top:-106px;
+            }
+            .mybutton
+            {
+            left: 200px;
+            top: -95px;
+            }
+            .mybutton1
+            {
+            left: 310px;
+            top: -143px;
+            }
+            .mydbutton
+            {
+            left: 250px;
+            top: -85px;
+            }
+            .mydbutton1
+            {
+            left: 355px;
+            top: -133px;
+            }
+            .mydropdown
+            {
+            width:100px;
+            height:28px;
+            left: 130px;
+            top:-95px;
+            }
+            .mystatustext
+            {
+            position: relative;
+            left:240px;
+            top:118px;
+            color: green;
+            font-weight: bold;
+            font-size: 12px;
+            }
+      </html:style>
+      <Page title="Edit Sales Order">
+            <content>
+                  <u:Shell id="myShell">
+                  <u:headItems>
+                              <u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2"
+                                    press="handlePressConfiguration" />
+                             <!--  <u:ShellHeadItem icon="sap-icon://save" tooltip="Save"
+                                    press="handleSavePress" /> -->
+
+                        </u:headItems>
+                        <u:headEndItems>
+                              <u:ShellHeadItem icon="sap-icon://home" tooltip="My Home"
+                                    press="handlePressHome" />
+                              <!-- <u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff"
+                                    press="handleLogoffPress" /> -->
+                        </u:headEndItems>
+                        <u:user>
+                              <u:ShellHeadUserItem image="sap-icon://person-placeholder"
+                                    username="Sales Representative" press="handleUserItemPressed" />
+                        </u:user>
+                  <u:content>
+                  <VBox class="myPage">
+                  <VBox id="vert" class="myeditvbox">
+                        <SearchField width="200px" visible="true" placeholder="Enter SO num." />
+                  </VBox>
+                  <HBox class="myhbox">
+                        <Text text="Shipment" class="mytext" />
+                  </HBox>
+
+                  <VBox id="vert1" class="myvbox1 myPage">
+                        <Text text="Shipping Address" class="mytext1" />
+                        <Input width="200px" placeholder="Address line1" tooltip="Address line1"
+                              class="myinput" editable="true" />
+                        <Input width="200px" placeholder="Address line3" tooltip="Address line3"
+                              class="myinput" editable="true" />
+                        <Input width="200px" placeholder="Address line2" tooltip="Address line2"
+                              class="myinput1" editable="true" />
+                        <Input width="200px" placeholder="Zip Code" tooltip="Zip code"
+                              class="myinput1" editable="true" />
+                        <Button width="90px" text="SAVE" class="mybutton" />
+                        <Button width="90px" text="CANCEL" class="mybutton1" />
+                  </VBox>
+                  <HBox class="myhbox1">
+                        <Text text="Items" class="mytext" />
+                  </HBox>
+                  <VBox id="vert2" class="myvbox2 myPage">
+                        <Text text="Item Details" class="mytext1" />
+                        <Text text="Status" class="mystatustext" />
+                        <Input width="200px" placeholder="Item" tooltip="Item" class="myinput" />
+                        <Input width="200px" placeholder="Quantity" tooltip="Quantity"
+                              class="myinput" editable="true" />
+                        <Input width="200px" placeholder="Price" tooltip="Price"
+                              class="myinput1" />
+                        <Input width="200px" placeholder="Subtotal" tooltip="Subtotal"
+                              class="myinput1" />
+
+                        <commons:DropdownBox class="mydropdown">
+                             
+                              <core:ListItem text="Open" />
+                              <core:ListItem text="In Process" />
+                              <core:ListItem text="Shipped" />
+                             
+                        </commons:DropdownBox>
+                        <Button width="90px" text="SAVE" class="mydbutton" />
+                        <Button width="90px" text="CANCEL" class="mydbutton1" />
+                  </VBox>
+                  </VBox>
+                  </u:content>
+                  </u:Shell>
+            </content>
+      </Page>
+</core:View>

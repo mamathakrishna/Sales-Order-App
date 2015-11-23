@@ -1,0 +1,150 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:u="sap.ui.unified" xmlns:f="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+		controllerName="sorderapp.SalesOrderCreationNext" xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<html:style>
+		.myPage
+		{
+		<!-- font-weight:bold; -->
+		font-weight:500;
+		background-image:url("images/plain_depth_hd.jpg")
+		!important;
+		}
+
+		.sapUiFormResGrid>div {
+		background-color:
+		rgba(255,255,255,0.8);
+		padding: 2rem 0.75rem;
+		-moz-box-sizing:
+		padding-box;
+		box-sizing: border-box;
+		}
+		.sapUiUfdSpltContCntnt 
+		{
+		overflow:
+		auto;
+		-webkit-overflow-scrolling: touch;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-image:url("images/plain_depth_hd.jpg") !important;
+		}
+		.sapUiSimpleForm {
+		width: 96%;
+		padding-top: 1rem;
+		padding-left: 3.5rem;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		}
+
+		.sapUiRespGridMedia-Std-Desktop.sapUiRespGridHSpace0>.sapUiRespGridSpanL12
+		{
+		width: 127%;
+		}
+
+.myStyleTitle .sapUiForm .sapUiFormTitle {
+    border-width: 0.0625rem;
+    font-family: Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    color: rgba(51, 51, 51, 0.01);
+}
+
+.sapUiFormTitleH5 {
+    font-size: 1.1rem;
+}
+
+.mybtnOverview{
+width:80%;
+}
+		
+
+		
+	</html:style>
+	<Page title="Create Sales Order">
+		<content>
+			<u:Shell id="myShell" icon="{/logo}">
+				<u:headItems>
+					<u:ShellHeadItem tooltip="Configuration" icon="sap-icon://menu2"
+						press="handlePressConfiguration" />
+					<u:ShellHeadItem icon="sap-icon://nav-back" tooltip="Back"
+						press="handleBackPress" /> 
+
+				</u:headItems>
+				<u:headEndItems>
+
+				</u:headEndItems>
+				<u:headEndItems>
+				<!-- 	<u:ShellHeadItem icon="sap-icon://log" tooltip="Logoff"
+						press="handleLogoffPress" /> -->
+					<u:ShellHeadItem tooltip="Home" icon="sap-icon://home"
+						visible="true" press="handlePressHome" />
+				</u:headEndItems>
+				<u:user>
+
+					<u:ShellHeadUserItem image="sap-icon://person-placeholder"
+						username="Sales Representative" press="handleUserItemPressed" />
+				</u:user>
+
+				<u:content>
+					<f:SimpleForm layout="ResponsiveGridLayout" id="Mainform"
+						title="Delivery Schedule" class="myStyleTitle">
+						<f:content>
+							<l:Grid hSpacing="1" vSpacing="1" defaultSpan="L4 M6 S12">
+								<l:content>
+									<l:Grid hSpacing="1" vSpacing="1" defaultSpan="L6 M6 S12">
+										<l:content>
+											<Label text="Req.Delivery Date" design="Bold"
+												textAlign="End">
+											</Label>
+											<DateTimeInput type="DateTime" placeholder="Enter Date &amp; Time ..."
+												class="sapUiSmallMarginBottom" />
+											<Label text="Payment Terms" design="Bold" textAlign="End">
+											</Label>
+											<Select width="100%">
+												<items>
+													<core:Item text="Z015" />
+													<core:Item text="Z016" />
+													<core:Item text="Z017" />
+												</items>
+											</Select>
+											<Label text="Order Reason" design="Bold" textAlign="End">
+											</Label>
+											<Select width="100%">
+												<items>
+													<core:Item text="Customer recommendation" />
+													<core:Item text="Excellent price" />
+													<core:Item text="Fast Delivery" />
+													<core:Item text="Good service" />
+												</items>
+											</Select>
+
+											<Button class="sapUiSmallMarginBottom mybtnOverview" text="Item Overview" icon="sap-icon://activity-2"
+												press="handleTableSelectDialogPress" tooltip="Item Overview">
+											</Button>
+										</l:content>
+									</l:Grid>
+
+
+								</l:content>
+							</l:Grid>
+						</f:content>
+					</f:SimpleForm>
+					
+				</u:content>
+			</u:Shell>
+			
+		</content>
+		<footer>
+			<Bar>
+				<contentRight>
+					<Button id="btnNext" type="Emphasized" text="Next" press="handleNextPress" icon="sap-icon://navigation-right-arrow" tooltip="Next" />
+					<!-- <Button id="btnBack" text="Back" type="Emphasized" press="handleSavePress" icon="sap-icon://arrow-left" class="mybtnCSNext "/> -->
+					<!-- <Button id="cancel" text="Cancel" visible="false" press="handleCancelPress" />  -->
+				</contentRight>
+			</Bar>
+		</footer> 
+	</Page>
+</core:View>
